@@ -9,4 +9,11 @@
 <br /><br /><br />
 
 
-<h2 ng-repeat="task in tasks">123</h2>
+<div ng-repeat="task in tasks">
+    <h2>{{task.title}}</h2>
+    <h4>{{task.body}}</h4>
+    <h4>{{task.created}}</h4>
+    <a ng-click="deleteTask($index)">Delete this task</a>
+</div>
+
+
