@@ -1,11 +1,12 @@
-{{example}}
 
-<br /><br />
 
-<input ng-model="example" >
+<div>
+    <input placeholder="Title" ng-model="newTask.title">
+    <input placeholder="Body" ng-model="newTask.body">
+    <a ng-click="createNewTask()">Save Task</a>
+</div>
 
-<br /><br />
-<div ng-if="myFunction()" >This div will dissapear</div>
+<br /><br /><br />
 
-<a href="" ng-click="addTwo()">dfdfdfdfdf</a>
 
+<h2 ng-repeat="task in tasks">123</h2>

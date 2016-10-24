@@ -9,13 +9,16 @@
  */
 angular.module('acmtutorialApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.example = "ABC123";
-    
-    $scope.myFunction = function(){
-        return $scope.example.length > 9;
+      
+    $scope.newTask = {};
+      
+    $scope.tasks = [];
+
+    $scope.createNewTask = function(){
+        $scope.tasks.push($scope.newTask);
+        
+        $scope.newTask = {};
     }
+
     
-    $scope.addTwo = function(){
-        $scope.example += "2";
-    }
   });
