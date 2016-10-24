@@ -8,9 +8,11 @@
  * Controller of the acmtutorialApp
  */
 angular.module('acmtutorialApp')
-  .controller('ASDFCtrl', function ($scope) {
+  .controller('ASDFCtrl', function ($scope, Tasks) {
       
     $scope.abc = "123";
+    
+    $scope.tasks = Tasks.get();
 
     
   });

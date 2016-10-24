@@ -1,19 +1,28 @@
 
-
 <div>
-    <input placeholder="Title" ng-model="newTask.title">
+    
     <md-input-container class="md-block" flex-gt-sm>
-    <label>First name</label>
-    <input ng-model="user.firstName">
-  </md-input-container>
-    <input placeholder="Body" ng-model="newTask.body">
-    <a ng-click="createNewTask()">Save Task</a>
+      <label>Task Title</label>
+      <input ng-model="newTask.title">
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Task Body</label>
+      <input ng-model="newTask.body">
+    </md-input-container>
+      
+    <md-button ng-click="createNewTask()" class="md-icon-button" aria-label="Save this Thing" style="margin-top: -24px;">
+        <i class="material-icons">border_color</i>
+        <md-tooltip md-delay="200">
+          Save this Thing
+        </md-tooltip>
+    </md-button>
 </div>
 
 <br /><br /><br />
 
 
-<div ng-repeat="task in tasks">
+<div ng-repeat="task in tasks track by task.created">
     <h2>{{task.title}}</h2>
     <h4>{{task.body}}</h4>
     <h4>{{task.created}}</h4>

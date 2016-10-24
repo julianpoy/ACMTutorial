@@ -28,7 +28,7 @@ angular
         templateUrl: 'views/anotherview.html',
         controller: 'AnotherViewCtrl'
       })
-      .when('/dfdfdfd', {
+      .when('/tasks', {
         templateUrl: 'views/asdf.html',
         controller: 'ASDFCtrl'
       })

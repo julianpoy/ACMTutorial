@@ -8,15 +8,16 @@
  * Controller of the acmtutorialApp
  */
 angular.module('acmtutorialApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, Tasks) {
       
     $scope.newTask = {};
       
-    $scope.tasks = [];
+    $scope.tasks = Tasks.get();
 
     $scope.createNewTask = function(){
         $scope.newTask.created = moment().subtract(5, "minutes").format("MM/DD/YYYY hh:mm:ss");
-        $scope.tasks.push($scope.newTask);
+        
+        Tasks.add($scope.newTask);
         
         $scope.newTask = {};
     }
